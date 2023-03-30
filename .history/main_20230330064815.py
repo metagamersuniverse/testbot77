@@ -9,7 +9,7 @@ provider = Web3.HTTPProvider(provider_url)
 web3 = Web3(provider)
 contract = web3.eth.contract(address=contract_address, abi=abi)
 
-bot = telegram.Bot(token='6248093145:AAFCHjEdvFYy3Hxz0gGO139ORlkbJBpznZQ')
+bot = telegram.Bot(token='YOUR_TELEGRAM_BOT_TOKEN_HERE')
 
 def handle_message(update, context):
     chat_id = update.message.chat_id
