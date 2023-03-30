@@ -16,8 +16,8 @@ bot.on('message', async (msg) => {
     const messageText = msg.text;
   
     if (messageText === '/status') {
-      const status = await contract.methods._lotteryRound().call();
-      bot.sendMessage(chatId, `Current status: ${status}`);
+      const status = await contract.methods._lotteryContract().call();
+      bot.sendMessage(chatId, `Current contract: ${status}`);
     }
   });
   
