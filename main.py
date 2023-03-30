@@ -1,11 +1,6 @@
 import telegram
 import requests
-from telegram.ext import (
-  CommandHandler,
-  MessageHandler,
-  Filters,
-  InlineQueryHandler,
-)
+from telegram.ext import ContextTypes, CommandHandler, filters as Filters, MessageHandler, CallbackQueryHandler
 from web3 import Web3
 from abi import abi
 
@@ -27,10 +22,9 @@ def handle_message(update, context):
     elif message_text == '/start':
         bot.send_message(chat_id=chat_id, text="Welcome to the lottery bot!")
 
-ok = MessageHandler(
-  Filters.text & (~Filters.command),
-  handle_message,
-)
-bot.add_handler(ok)
 
-bot.polling()
+USER_HANDLER = MessageHandler(
+    Filters.ALL, handle_message, block=False
+)
+bot.add_handler(USER_HANDLER, 5)
+bot.run_polling()
