@@ -1,7 +1,7 @@
 import telegram
 import requests
 from web3 import Web3
-import abi
+from abi import abi
 
 contract_address = '0x7F6228DdA3F9ea6B4beAa24181bf95B2F4a29dB8'
 provider_url = 'https://arbitrum-mainnet.infura.io/v3/3f689e592e6c45b7bf752c5a97a54ff9'
