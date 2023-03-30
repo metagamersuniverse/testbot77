@@ -9,7 +9,7 @@ const web3 = new Web3(provider);
 
 const contract = new web3.eth.Contract(abi, contractAddress);
 
-const bot = new TelegramBot('6248093145:AAFi5t1Fkbq78LbgkYRxV_8eMYlskaix1as', { polling: true });
+const bot = new TelegramBot('YOUR_TELEGRAM_BOT_TOKEN', { polling: true });
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;
   const messageText = msg.text;
