@@ -7,7 +7,7 @@ contract_address = '0x7F6228DdA3F9ea6B4beAa24181bf95B2F4a29dB8'
 provider_url = 'https://arbitrum-mainnet.infura.io/v3/3f689e592e6c45b7bf752c5a97a54ff9'
 provider = Web3.HTTPProvider(provider_url)
 web3 = Web3(provider)
-contract = web3.eth.contract(address=contract_address, abi=abi.abi)
+contract = web3.eth.contract(address=contract_address, abi=abi)
 
 bot = telegram.Bot(token='6248093145:AAFCHjEdvFYy3Hxz0gGO139ORlkbJBpznZQ')
 
